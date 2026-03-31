@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | IntelliPark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="panel-page">
+  <header class="panel-header">
+    <a class="logo" href="index.html">INTELLI<span>PARK</span></a>
+    <div class="panel-header-actions">
+      <a class="btn btn-outline" href="index.html">Home</a>
+      <a id="notificationsBtn" class="btn btn-outline notifications-link" href="notifications.html">
+        Notifications
+        <span id="notificationsBadge" class="notifications-badge hidden">0</span>
+      </a>
+      <button id="logoutBtn" class="btn btn-outline" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="panel-wrap">
+    <section class="panel-card">
+      <h1 id="welcomeUser">Welcome</h1>
+      <h2>Place-wise Available Slots</h2>
+      <div id="placeAvailability" class="place-grid"></div>
+    </section>
+
+    <section class="panel-card">
+      <h2>My Profile</h2>
+      <div class="profile-editor">
+        <img id="profilePhotoPreview" class="profile-avatar profile-avatar-lg" src="" alt="User profile photo">
+        <div class="profile-editor-form">
+          <p id="profileIdentity"></p>
+          <label class="file-label" for="profilePhotoInput">Choose Photo</label>
+          <input id="profilePhotoInput" type="file" accept="image/*">
+          <div class="payment-actions">
+            <button id="saveProfilePhotoBtn" type="button" class="btn btn-primary">Save Photo</button>
+            <button id="removeProfilePhotoBtn" type="button" class="btn btn-outline">Remove Photo</button>
+          </div>
+          <p id="profileMsg" class="form-msg"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="bookingPanel" class="panel-card hidden">
+      <h2>Book Parking Slot</h2>
+      <form id="bookingForm" class="form-grid">
+        <label>
+          Vehicle Number
+          <input type="text" name="vehicleNumber" placeholder="MH12AB1234" required>
+        </label>
+        <label>
+          Place Name
+          <select name="placeName" required>
+            <option value="">Select Place</option>
+            <option value="Goregaon">Goregaon</option>
+          </select>
+        </label>
+        <label>
+          From Date
+          <input type="date" name="fromDate" required>
+        </label>
+        <label>
+          From Time
+          <input type="time" name="fromTime" required>
+        </label>
+        <label>
+          To Date
+          <input type="date" name="toDate" required>
+        </label>
+        <label>
+          To Time
+          <input type="time" name="toTime" required>
+        </label>
+        <label>
+          Payment Method
+          <select name="paymentMethod" required>
+            <option value="upi">UPI</option>
+            <option value="cash">Cash</option>
+          </select>
+        </label>
+        <p id="bookingAmountInfo" class="form-msg"></p>
+        <button type="submit" class="btn btn-primary">Book Next Available Slot</button>
+        <p id="bookingMsg" class="form-msg"></p>
+      </form>
+      <div id="paymentPanel" class="payment-panel hidden">
+        <h3>UPI Payment</h3>
+        <p id="paymentInfo"></p>
+        <img id="upiQrImage" class="qr-preview" src="" alt="UPI QR Code">
+        <div class="payment-actions">
+          <button id="upiPaidBtn" type="button" class="btn btn-primary">Payment Successful</button>
+          <button id="upiCancelBtn" type="button" class="btn btn-outline">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-card">
+      <h2>My Active Bookings</h2>
+      <div id="myBookings" class="list-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

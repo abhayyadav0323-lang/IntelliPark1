@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300b050'/%3E%3Cpath d='M20 15h14c9 0 14 5 14 12s-5 12-14 12h-6v10h-8V15zm8 7v10h6c4 0 6-2 6-5s-2-5-6-5h-6z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <main class="auth-wrap">
+    <section class="auth-card">
+      <a class="logo auth-logo" href="index.html">INTELLI<span>PARK</span></a>
+      <h1>Create Account</h1>
+      <p>Sign up to start booking parking slots.</p>
+      <form id="signupForm" class="form-grid">
+        <label>
+          Full Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required>
+        </label>
+        <label>
+          Confirm Password
+          <input type="password" name="confirmPassword" required>
+        </label>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <p id="signupMsg" class="form-msg"></p>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+

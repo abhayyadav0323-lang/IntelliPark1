@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300b050'/%3E%3Cpath d='M20 15h14c9 0 14 5 14 12s-5 12-14 12h-6v10h-8V15zm8 7v10h6c4 0 6-2 6-5s-2-5-6-5h-6z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="panel-page">
+  <header class="panel-header">
+    <a class="logo" href="index.html">INTELLI<span>PARK</span></a>
+    <div class="panel-header-actions">
+      <a class="btn btn-outline" href="admin.html">Back to Admin</a>
+      <a class="btn btn-outline" href="admin-notifications.html">Notifications</a>
+      <a class="btn btn-outline" href="admin-revenue.html">Revenue</a>
+      <a class="btn btn-outline" href="admin-users.html">Users</a>
+      <button id="adminReachMessagesLogoutBtn" class="btn btn-outline" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="panel-wrap">
+    <section class="panel-card">
+      <h1>Reach Us Messages</h1>
+      <p id="adminReachMessagesMeta" class="form-msg"></p>
+      <div id="adminReachMessagesList" class="list-grid"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

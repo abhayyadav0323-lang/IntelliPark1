@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntelliPark | Smart Parking Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300b050'/%3E%3Cpath d='M20 15h14c9 0 14 5 14 12s-5 12-14 12h-6v10h-8V15zm8 7v10h6c4 0 6-2 6-5s-2-5-6-5h-6z' fill='white'/%3E%3C/svg%3E">
+  <meta name="description" content="Smart semi-automatic and fully automatic parking systems for urban spaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <p>+91 9616972697</p>
+      <p>Smart Parking Solutions in Mumbai, Maharashtra</p>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">INTELLI<span>PARK</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#systems">Systems</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="siteSidebar" aria-expanded="false">Menu</button>
+    </div>
+  </nav>
+
+  <div class="quick-rail" aria-label="Quick actions">
+    <a href="tel:+919616972697" aria-label="Call IntelliPark">Call</a>
+    <a href="https://wa.me/919616972697" target="_blank" rel="noopener" aria-label="WhatsApp IntelliPark">WhatsApp</a>
+    <a href="#contact" aria-label="Open enquiry section">Enquiry</a>
+  </div>
+
+  <aside class="site-sidebar" id="siteSidebar" aria-hidden="true">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">x</button>
+    <a href="#home" class="sidebar-logo">INTELLI<span>PARK</span></a>
+    <nav class="sidebar-nav" aria-label="Sidebar navigation">
+      <a href="#about">About</a>
+      <a href="#systems">Products</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#contact">Contact</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div class="sidebar-contact">
+      <p><strong>Phone</strong></p>
+      <a href="tel:+919616972697">+91 9616972697</a>
+      <p><strong>Email</strong></p>
+      <a href="mailto:parkinfo@shyamtechno.com">parkinfo@shyamtechno.com</a>
+    </div>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+  <main>
+    <section id="home" class="hero iot-hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>SMART PARKING THAT CONNECTS SENSORS TO LIVE SLOT BOOKING</h1>
+        <p class="hero-text">
+          IntelliPark combines ground IoT sensors, entry/exit controllers, and a web dashboard
+          to show real-time slot availability and enable fast user booking from any device.
+        </p>
+        <div class="hero-cta">
+          <!-- 🔴 LIVE SLOT INFO (NEW) -->
+<div style="margin-top:20px; text-align:center;">
+  <h3 style="color:white;">
+    Free: <span id="freeSlots">0</span> | 
+    Occupied: <span id="occupiedSlots">0</span>
+  </h3>
+
+  <div id="slotContainer" style="
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+  "></div>
+</div>
+          <a class="btn btn-primary" href="dashboard.html">BOOK SLOT NOW</a>
+          <a class="btn btn-outline" href="#systems">SEE INTEGRATION FLOW</a>
+        </div>
+        <div class="hero-metrics">
+          <article>
+            <h3>Live</h3>
+            <p>Slot Status Sync</p>
+          </article>
+          <article>
+            <h3>&lt; 2s</h3>
+            <p>Sensor-to-Web Update</p>
+          </article>
+          <article>
+            <h3>24/7</h3>
+            <p>Cloud Monitoring</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section app-showcase">
+      <div class="container">
+        <p class="eyebrow">App Preview</p>
+        <h2>LIVE APP SCREENS AUTO SLIDING</h2>
+      </div>
+      <div class="app-slider" aria-label="App screenshots slider">
+        <div class="app-track">
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80" alt="App dashboard view"></article>
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80" alt="Mobile booking interface"></article>
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Analytics and reports screen"></article>
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=900&q=80" alt="Vehicle entry validation screen"></article>
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="IoT integration monitor screen"></article>
+          <article class="app-shot"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt="Slot booking confirmation screen"></article>
+
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=900&q=80" alt=""></article>
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=80" alt=""></article>
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt=""></article>
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=900&q=80" alt=""></article>
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt=""></article>
+          <article class="app-shot" aria-hidden="true"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80" alt=""></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about iot-about">
+      <div class="container grid-2">
+        <div>
+          <p class="eyebrow">Project Overview</p>
+          <h2>IOT HARDWARE + WEBSITE + USER APP IN ONE SYSTEM</h2>
+          <p>
+            This platform is built for real-world parking operations where hardware and software
+            must work together in real time. Every slot has status tracking, and every status is
+            reflected instantly on the website.
+          </p>
+          <p>
+            Users can check available slots, reserve instantly, and navigate to the booked space.
+            Admins get centralized control of occupancy, alerts, and booking activity.
+          </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=1200&q=80" alt="IoT parking and website integration">
+      </div>
+    </section>
+
+    <section id="systems" class="section systems iot-systems">
+      <div class="container">
+        <p class="eyebrow">System Architecture</p>
+        <h2>HOW INTELLIPARK INTEGRATION WORKS</h2>
+        <div class="cards iot-architecture">
+          <article class="card reveal">
+            <h3>1. Slot Sensor Layer</h3>
+            <p>Ultrasonic/IR sensors detect vehicle presence and push occupancy status to controller nodes.</p>
+          </article>
+          <article class="card reveal">
+            <h3>2. IoT Gateway Layer</h3>
+            <p>Edge gateway validates readings, timestamps events, and sends secure updates to cloud APIs.</p>
+          </article>
+          <article class="card reveal">
+            <h3>3. Web Platform Layer</h3>
+            <p>Website dashboard renders live slot map, handles booking, and updates admin analytics instantly.</p>
+          </article>
+        </div>
+
+        <h2 class="sub-title">USER BOOKING PROCESS</h2>
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <span>01</span>
+            <h3>Check Availability</h3>
+            <p>User opens website and sees current free/occupied slots in real time.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>02</span>
+            <h3>Select and Reserve</h3>
+            <p>User chooses slot, confirms booking, and receives reservation details.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>03</span>
+            <h3>Entry Validation</h3>
+            <p>At gate, reservation is validated and slot is locked to avoid double booking.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>04</span>
+            <h3>Exit and Auto Update</h3>
+            <p>On exit, slot state resets and becomes available instantly on web dashboard.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section portal-cta iot-cta">
+      <div class="container brochure-box">
+        <div>
+          <p class="eyebrow">Live Portal</p>
+          <h2>Ready for User Signup, Login, Slot View and Instant Booking</h2>
+        </div>
+        <a class="btn btn-primary" id="portalGetStartedBtn" href="signup.html">Get Started</a>
+      </div>
+    </section>
+
+    <section id="blogs" class="section blogs iot-blogs">
+      <div class="container">
+        <h2>Use Cases for IoT + Parking Website Integration</h2>
+        <div class="cards blog-cards">
+          <article class="card reveal">
+            <h3>Residential Societies</h3>
+            <p>Reduce gate congestion with pre-booked visitor slots and live occupancy status.</p>
+            <a href="#contact">Talk to team</a>
+          </article>
+          <article class="card reveal">
+            <h3>Commercial Complexes</h3>
+            <p>Optimize basement turnover and monitor demand patterns with admin insights.</p>
+            <a href="#contact">Talk to team</a>
+          </article>
+          <article class="card reveal">
+            <h3>Campus and Industrial Parks</h3>
+            <p>Centralized multi-zone parking control with reliable web access for users and operators.</p>
+            <a href="#contact">Talk to team</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Address</h3>
+        <p>Andheri Kurla Road, Andheri East, Mumbai, Maharashtra - 400059</p>
+        <p>2nd Floor, Business Plaza, Powai, Mumbai, Maharashtra - 400076</p>
+        <p>Sector 15, CBD Belapur, Navi Mumbai, Maharashtra - 400614</p>
+      </div>
+      <div>
+        <h3>Reach Us Out</h3>
+        <form id="reachUsForm" class="contact-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="phone" placeholder="Phone no." required>
+          <input type="text" name="projectLocation" placeholder="Project Location" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+        <p id="reachUsMsg" class="form-msg"></p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>IntelliPark | Powered by Shyam Global Technoventures Pvt. Ltd.</p>
+    </div>
+  </footer>
+
+  <div id="portalToast" class="portal-toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+  <!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script>
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBClUkhFBkyKw9sWXKS-cke50ifR6toJEQ",
+  authDomain: "intellipark-85f49.firebaseapp.com",
+  databaseURL: "https://intellipark-85f49-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "intellipark-85f49",
+  storageBucket: "intellipark-85f49.firebasestorage.app",
+  messagingSenderId: "227630852647",
+  appId: "1:227630852647:web:d7ebae099cded0c1c43c02"
+};
+
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+const freeEl = document.getElementById("freeSlots");
+const occEl = document.getElementById("occupiedSlots");
+const container = document.getElementById("slotContainer");
+
+db.ref("slots").on("value", snapshot => {
+  const data = snapshot.val();
+  if (!data) return;
+
+  let free = 0;
+  let occupied = 0;
+
+  container.innerHTML = "";
+
+  Object.keys(data).forEach(slot => {
+    const isOccupied = data[slot];
+
+    const box = document.createElement("div");
+
+    box.style.padding = "8px 12px";
+    box.style.borderRadius = "6px";
+    box.style.color = "white";
+    box.style.fontSize = "14px";
+    box.style.fontWeight = "bold";
+
+    if (isOccupied) {
+      occupied++;
+      box.style.background = "red";
+      box.innerText = slot;
+    } else {
+      free++;
+      box.style.background = "green";
+      box.innerText = slot;
+    }
+
+    container.appendChild(box);
+  });
+
+  freeEl.innerText = free;
+  occEl.innerText = occupied;
+});
+</script>
+</body>
+</html>
