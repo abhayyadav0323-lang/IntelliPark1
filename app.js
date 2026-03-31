@@ -122,7 +122,7 @@ function getSettings() {
   const baseSlots =
     settings.placeSlots && typeof settings.placeSlots === "object"
       ? settings.placeSlots
-      : buildDefaultPlaceSlots(30);
+      : buildDefaultPlaceSlots(4);
   const baseRates =
     settings.placeRates && typeof settings.placeRates === "object"
       ? settings.placeRates
@@ -922,7 +922,7 @@ function renderDashboardPage() {
       )} ${formatTimeOnly(fromTime)} to ${formatDateOnly(toDate)} ${formatTimeOnly(toTime)}).`;
       upiQrImage.src = getQrImageUrl(upiPayload, 220);
       paymentPanel.classList.remove("hidden");
-      setMessage(msg, "UPI QR scan karke payment complete karein.");
+      setMessage(msg, "Please scan the UPI QR code to complete payment.");
       return;
     }
 
@@ -2027,7 +2027,7 @@ function renderAdminUsersPage() {
 function bindDemoCredentialNote() {
   const adminHint = document.getElementById("adminHint");
   if (!adminHint) return;
-  adminHint.textContent = "Demo admin: admin@intellipark.com / admin123";
+  adminHint.remove();
 }
 
 initSystem();
