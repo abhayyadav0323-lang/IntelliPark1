@@ -12,7 +12,7 @@ const PLACE_NAMES = [
   "Goregaon",
 ];
 
-function buildDefaultPlaceSlots(defaultCount = 30) {
+function buildDefaultPlaceSlots(defaultCount = 4) {
   return PLACE_NAMES.reduce((acc, placeName) => {
     acc[placeName] = defaultCount;
     return acc;
@@ -73,7 +73,7 @@ function initSystem() {
       placeRates: buildDefaultPlaceRates(BOOKING_AMOUNT),
     });
   } else {
-    const fallbackCount = Number.isInteger(settings.totalSlots) ? settings.totalSlots : 30;
+    const fallbackCount = Number.isInteger(settings.totalSlots) ? settings.totalSlots : 4;
     const existingSlots =
       settings.placeSlots && typeof settings.placeSlots === "object" ? settings.placeSlots : {};
     const normalizedPlaceSlots = PLACE_NAMES.reduce((acc, placeName) => {
@@ -116,7 +116,7 @@ function getUsers() {
 
 function getSettings() {
   const settings = readJson(STORAGE_KEYS.settings, {
-    placeSlots: buildDefaultPlaceSlots(30),
+    placeSlots: buildDefaultPlaceSlots(4),
     placeRates: buildDefaultPlaceRates(BOOKING_AMOUNT),
   });
   const baseSlots =
@@ -129,7 +129,7 @@ function getSettings() {
       : buildDefaultPlaceRates(BOOKING_AMOUNT);
   const placeSlots = PLACE_NAMES.reduce((acc, placeName) => {
     const rawValue = baseSlots[placeName];
-    const value = Number.isInteger(rawValue) && rawValue >= 0 ? rawValue : 30;
+    const value = Number.isInteger(rawValue) && rawValue >= 0 ? rawValue : 4;
     acc[placeName] = value;
     return acc;
   }, {});
