@@ -69,7 +69,7 @@ function initSystem() {
 
   if (!settings) {
     writeJson(STORAGE_KEYS.settings, {
-      placeSlots: buildDefaultPlaceSlots(30),
+      placeSlots: buildDefaultPlaceSlots(4),
       placeRates: buildDefaultPlaceRates(BOOKING_AMOUNT),
     });
   } else {
